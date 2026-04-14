@@ -14,11 +14,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
 
-from google.colab import drive
-drive.mount('/content/drive')
-
-path = '/content/drive/MyDrive/MTM_Risk_project/data/raw.csv'
-SCORED_PATH = Path('/content/drive/MyDrive/MTM_Risk_project/data/scored_data.csv')
+path = 'data/raw.csv'
+SCORED_PATH = Path('data/scored_data.csv')
 
 # Load the raw data into a DataFrame
 df = pd.read_csv(path)
