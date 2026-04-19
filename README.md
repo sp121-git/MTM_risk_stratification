@@ -159,6 +159,24 @@ All data used in this project is **fully synthetic**, generated programmatically
 
 ---
 
+## Update
+MTM_app.py — Self-Contained Risk Stratification Dashboard
+MTM_app.py is the final version of the MTM Risk Stratification System — a fully self-contained Streamlit dashboard that runs the complete clinical AI pipeline from a single file upload.
+How it works
+Upload a raw patient CSV and the app automatically runs the full pipeline — data cleaning, feature engineering, rule-based scoring, safety rule overrides, explainability, MTM recommendations, and three machine learning models — then displays the results as an interactive dashboard. No external scripts, no pre-generated files, no setup required.
+What it does
+
+Accepts any patient CSV with the required clinical columns
+Runs the complete MTM risk stratification pipeline internally
+Scores patients as Low, Medium, or High risk using Model C (adherence-focused weighted scoring)
+Applies three safety rule overrides to catch under-classified high-risk cases
+Trains Logistic Regression and Random Forest models with 5-fold cross-validation
+Combines models into an ensemble probability score with per-patient confidence flagging
+Displays results across three dashboard tabs — population overview, ML insights, and per-patient detail
+Provides a one-click download of the fully scored results CSV
+
+---
+
 ## Author
 
 Master's Student — Health Informatics (Pharmacy background)  
